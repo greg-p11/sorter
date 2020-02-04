@@ -1,0 +1,279 @@
+body{
+    background-color: rgb(163, 156, 170);
+    background-image: url("https://pngimage.net/wp-content/uploads/2018/06/wallpaper-white-png-1.png");
+    background-position: center;
+    margin:0px;
+    padding: 0px;
+}
+.title{
+    text-align: center;
+    font-size:60px;
+    margin:10px;
+}
+.title1{
+    border: 2px solid rgb(71, 67, 67);
+    border-radius: 5px;
+    padding: 3px;
+    border-radius:5px 0 0 5px;
+}
+.title2{
+    border: 2px solid rgb(71, 67, 67);
+    color:snow;
+    background-color: rgb(71, 67, 67);
+    border-radius:0 5px 5px 0;
+    padding: 3px;
+}
+
+
+/* _____________________________________________________________________________________________________________ */
+/* CSS for navbar elements */
+.nav{
+    display:flex;
+}
+.nav div{
+    display:flex;
+    width:100%;
+    margin:15px;
+    justify-content: center;
+    font-size:30px; 
+}
+label{
+    cursor: pointer;
+}
+input{
+    cursor: pointer;
+}
+.nav__first{
+    border-right: solid 3px black;
+    border-bottom: solid 3px black;
+    background-color: rgba(216, 210, 210, 0.5);
+    border-radius:30px 0 0 0;
+}
+.nav__second{
+    border-bottom: solid 3px black;
+    background-color: rgba(216, 210, 210, 0.5);
+    border-radius:30px 30px 0 0;
+}
+.nav__third{
+    border-left: solid 3px black;
+    border-bottom: solid 3px black;
+    background-color: rgba(216, 210, 210, 0.5);
+    border-radius:0 30px 0 0;
+}
+[type="radio"]{
+    display:none;
+}
+[type="radio"]:not(:checked) +label  {
+    opacity: 0.5;
+    transform: scale(0.9);
+    color: black;
+}
+[type="radio"]:not(:checked) +label:hover  {
+    opacity: 0.5;
+    transform: scale(1.3);
+    color: red;
+}
+[type="radio"]:checked +label  {
+    opacity: 1;
+    transform: scale(1.3);
+    color: black;
+}
+
+
+
+/* _____________________________________________________________________________________________________________ */
+/* CSS for main elements */
+main{
+    margin:0px;  
+}
+.container{
+    display:flex;
+    height:70vh;
+}
+.container__textContent{
+    display:flex;
+    position: relative;
+    width:45%;
+    align-content:center;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+}
+.container__textArea{
+    box-sizing: border-box;
+    width:95%;
+    height:96%;
+    border-radius: 30px;
+    padding: 20px;
+    resize: none;
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+}
+
+
+
+/* _____________________________________________________________________________________________________________ */
+/* CSS for buttons */
+.btn{
+    color:snow;
+    font-size: 20px;
+    height:30px;
+    width:40px;
+    border:solid 2px;
+    cursor: pointer;
+    background-color: rgb(238, 230, 230);
+    -webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
+}
+.btn:hover{
+    transform: scale(1.05);
+    opacity:0.9;
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+}
+.btn:active{
+    transform: scale(0.95);
+    opacity:0.7;
+}
+.btn--delete{
+    z-index: 10;
+    bottom: 5%;
+    right: 5%;
+    position: absolute;
+    color: rgb(180, 18, 50);
+    border-radius: 10px;
+}
+.btn--copy{
+    z-index: 10;
+    bottom: 5%;
+    right: 5%;
+    position: absolute;
+    color: rgb(18, 48, 180);
+    border-radius: 10px;
+}
+.container__btnHolder{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    width:10%;
+    height:100%;
+}
+.btn--sort{
+    color: rgb(18, 180, 32);
+    height:15%;
+    min-height:60px;
+    width:100%;
+    min-width:100px;
+    border-radius: 15px;
+    font-size: 40px; 
+    border: solid 4px;
+}
+.btn--start{
+    position: relative;
+    animation: rotate 20s infinite;
+}
+
+
+@keyframes rotate {
+    0% {transform: rotate(0deg); color: rgb(18, 180, 32); right:0px;}
+    5%  {transform: rotate(-360deg); color: rgb(0, 255, 0); right:15px;}
+    10% {transform: rotate(0deg); color: rgb(18, 180, 32); right:0px;}
+    40% {}
+    50% {transform: rotate(0deg); color: rgb(18, 180, 32); left:0px;}
+    55%  {transform: rotate(360deg); color: rgb(0, 255, 0); left:15px;}
+    60% {transform: rotate(0deg); color: rgb(18, 180, 32); left:0px;}
+    100% {}
+}
+
+
+/* ________________________________________________________________________________________________________ */
+/* RWD */
+@media screen and (max-width: 1000px) {
+    .title{
+        font-size:50px;
+    }
+    .btn--sort{
+        width:100%;
+        min-width:60px;
+        font-size: 30px; 
+    }
+    .nav div{
+        font-size:20px;
+    }
+  }
+
+@media screen and (max-width: 720px) {
+    .nav{
+        display:block;
+    }
+    .container{
+        display:block;
+    }
+    .container__textContent{
+        width:100%;
+        height: 50%;
+        min-height: 150px;
+    }
+    .btn--start{
+        transform: rotate(90deg) !important;
+    }
+    .nav div{
+        justify-content:center;
+        width:90%;
+        margin:auto;
+        margin-top:10px;
+        margin-bottom:10px;
+        font-size:20px;
+    }
+    .nav__first{
+        border-right: none;
+        border-radius:30px 30px 0 0;
+    }
+    .nav__third{
+        border-left: none;
+        border-radius:30px 30px 0 0;
+    }
+    .btn{
+        font-size: 15px;
+        height:25px;
+        width:35px;
+    }
+    .btn--delete{
+        bottom: 8%;
+        right: 8%;
+    }
+    .btn--copy{
+        bottom: 8%;
+        right: 8%;
+    }
+    .container__btnHolder{
+        align-items:center;
+        width:100%;
+        height:15%;
+        min-height:60px;
+    }
+    .btn--sort{
+        width:40%;
+        min-width:100px;
+        min-height:50px ;
+    }
+  }
+
+  @media screen and (max-width: 420px) {  
+    .title{
+        font-size:35px;
+    }
+    .nav div{
+        margin-bottom:10px;
+        font-size:15px;
+    }
+    .btn--sort{
+        width:40%;
+        min-width:100px;
+        min-height:40px;
+        font-size: 25px;
+    }
+  }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SortER</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"  content="Sort your numbers or words">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="title"><span class="title1">Sort</span><span class="title2">ER</span></div>
+            
+            <nav class="nav">
+                <div class="nav__first">
+                    <div class="nav__element">
+                        <input id="noReverse" type="radio" name="typeOfOrder" value="1" checked>
+                        <label id="label1" for ="noReverse"></label>
+                    </div>
+                    <div class="nav__element">
+                        <input id="reverse" type="radio" name="typeOfOrder" value="2">
+                        <label id="label2" for ="reverse"></label>
+                    </div>
+                </div>
+                <div class="nav__second">
+                    <div class="nav__element">
+                        <input id="sort1" type="radio" name="whatSort" value="1"  checked disabled>
+                        <label for ="sort1">LICZBY</label>
+                    </div>
+                    <div class="nav__element">
+                        <input id="sort2" type="radio" name="whatSort" value="2">
+                        <label for ="sort2">SŁOWA</label>
+                    </div>
+                </div>
+                <div class="nav__third">
+                    <div class="nav__element">
+                        <input id="noLine" type="radio" name="typeOfText" value="1" checked>
+                        <label for ="noLine"><i class="fas fa-list-ul"></i></label>
+                    </div>
+                    <div class="nav__element">
+                        <input id="line" type="radio" name="typeOfText" value="2">
+                        <label for ="line"><i class="fas fa-align-justify"></i></label>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="container__textContent">
+                    <textarea id="sortText" class="container__textArea" placeholder="Enter the content to sort"></textarea>
+                    <button id="btnDelete" class="btn btn--delete"><i class="far fa-times-circle"></i></button>
+                </div>
+                <div class="container__btnHolder">
+                    <button id="btnSort" class="btn btn--sort"><i class="btn--start far fa-play-circle"></i></button>
+                </div>
+                <div class="container__textContent">
+                    <textarea id="sortResult" class="container__textArea" ></textarea>
+                    <button id="btnCopy" class="btn btn--copy"><i  class="far fa-copy"></i></button>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+</html>
